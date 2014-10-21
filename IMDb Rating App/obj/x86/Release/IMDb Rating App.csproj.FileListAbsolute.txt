@@ -1,0 +1,17 @@
+D:\Projects\NET\IMDb Rating App\IMDb Rating App\bin\Release\IMDb Rating App.exe
+D:\Projects\NET\IMDb Rating App\IMDb Rating App\bin\Release\IMDb Rating App.pdb
+D:\Projects\NET\IMDb Rating App\IMDb Rating App\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Projects\NET\IMDb Rating App\IMDb Rating App\obj\x86\Release\IMDb_Rating_App.MainForm.resources
+D:\Projects\NET\IMDb Rating App\IMDb Rating App\obj\x86\Release\IMDb_Rating_App.Properties.Resources.resources
+D:\Projects\NET\IMDb Rating App\IMDb Rating App\obj\x86\Release\GenerateResource.read.1.tlog
+D:\Projects\NET\IMDb Rating App\IMDb Rating App\obj\x86\Release\GenerateResource.write.1.tlog
+D:\Projects\NET\IMDb Rating App\IMDb Rating App\obj\x86\Release\IMDb Rating App.exe
+D:\Projects\NET\IMDb Rating App\IMDb Rating App\obj\x86\Release\IMDb Rating App.pdb
+C:\Projects\net\IMDb Rating App\IMDb Rating App\obj\x86\Release\IMDb Rating App.exe
+C:\Projects\net\IMDb Rating App\IMDb Rating App\obj\x86\Release\IMDb Rating App.pdb
+C:\Projects\net\IMDb Rating App\IMDb Rating App\bin\Release\IMDb Rating App.exe
+C:\Projects\net\IMDb Rating App\IMDb Rating App\bin\Release\IMDb Rating App.pdb
+C:\Projects\net\IMDb Rating App\IMDb Rating App\obj\x86\Release\IMDb_Rating_App.MainForm.resources
+C:\Projects\net\IMDb Rating App\IMDb Rating App\obj\x86\Release\IMDb_Rating_App.Properties.Resources.resources
+C:\Projects\net\IMDb Rating App\IMDb Rating App\obj\x86\Release\IMDb Rating App.csproj.GenerateResource.Cache
+C:\Projects\net\IMDb Rating App\IMDb Rating App\obj\x86\Release\IMDb Rating App.csprojResolveAssemblyReference.cache
