@@ -161,7 +161,7 @@ namespace IMDb_Rating_App
 
             for (int i = 0; i < ratingsOrdered.Count; i++)
             {
-                ratingsOrdered[i].Group.Location = new Point(TemplateGb.Location.X, i * (TemplateGb.Height + 10));
+                ratingsOrdered[i].Group.Location = new Point(TemplateGb.Location.X, i * (TemplateGb.Height + 10) - panel1.VerticalScroll.Value);
 
                 string cardinal = (i+1).ToString();
                 if (cardinal.EndsWith("1"))

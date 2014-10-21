@@ -136,7 +136,7 @@
             this.panel1.Controls.Add(this.TemplateGb);
             this.panel1.Location = new System.Drawing.Point(16, 122);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(727, 390);
+            this.panel1.Size = new System.Drawing.Size(727, 588);
             this.panel1.TabIndex = 8;
             this.panel1.TabStop = true;
             this.panel1.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
@@ -258,7 +258,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(755, 524);
+            this.ClientSize = new System.Drawing.Size(755, 722);
             this.Controls.Add(this.progress);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.statusLb);
@@ -272,7 +272,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "IMDb Rating App";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.TemplateGb.ResumeLayout(false);
