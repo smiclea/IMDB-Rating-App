@@ -223,12 +223,14 @@
             // 
             // posterPb
             // 
+            this.posterPb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.posterPb.Location = new System.Drawing.Point(7, 20);
             this.posterPb.Name = "posterPb";
             this.posterPb.Size = new System.Drawing.Size(132, 151);
             this.posterPb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.posterPb.TabIndex = 1;
             this.posterPb.TabStop = false;
+            this.posterPb.Click += new System.EventHandler(this.posterPb_Click);
             // 
             // titleLb
             // 

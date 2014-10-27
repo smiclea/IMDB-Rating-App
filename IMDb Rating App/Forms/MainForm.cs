@@ -13,6 +13,7 @@ using System.Globalization;
 using System.Diagnostics;
 using System.IO;
 using IMDb_Rating_App.Proxy;
+using IMDb_Rating_App.Forms;
 
 namespace IMDb_Rating_App
 {
@@ -68,11 +69,14 @@ namespace IMDb_Rating_App
             {
                 Location = posterPb.Location,
                 Size = posterPb.Size,
-                SizeMode = posterPb.SizeMode
+                SizeMode = posterPb.SizeMode,
+                Cursor = posterPb.Cursor
             };
 
             if (!string.IsNullOrEmpty(title.Poster))
                 poster.Load(title.Poster);
+
+            poster.Click += new EventHandler(posterPb_Click);
 
             Label movieTitle = new Label()
             {
@@ -313,6 +317,29 @@ namespace IMDb_Rating_App
         private void metascoreRb_CheckedChanged(object sender, EventArgs e)
         {
             sortGroupBoxes();
+        }
+
+        private void posterPb_Click(object sender, EventArgs e)
+        {
+            GroupBox group = (sender as PictureBox).Parent as GroupBox;
+            string link = "";
+
+            foreach (TitleGroup titleGroup in titleGroups)
+            {
+                if (titleGroup.Group == group)
+                {
+                    link = titleGroup.Title.Poster;
+                    break;
+                }
+            }
+
+            Poster posterFrm = new Poster();
+
+            if (link != "")
+                posterFrm.link = link;
+                //posterFrm.link = "http://ftp.gunadarma.ac.id/android/sdk/sdk_310712/docs/images/icon_design/IconGraphic_Icons_i.png";
+
+            posterFrm.ShowDialog();
         }
 
     }

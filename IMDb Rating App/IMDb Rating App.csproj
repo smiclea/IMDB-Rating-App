@@ -55,6 +55,12 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Poster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Poster.Designer.cs">
+      <DependentUpon>Poster.cs</DependentUpon>
+    </Compile>
     <Compile Include="Proxy\IMDbAPI.cs" />
     <Compile Include="Model\IMDbTitle.cs" />
     <Compile Include="Model\Template.cs" />
@@ -64,6 +70,9 @@
     <Compile Include="Proxy\TemplateReader.cs" />
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Poster.resx">
+      <DependentUpon>Poster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
