@@ -48,6 +48,9 @@
             this.titleLb = new System.Windows.Forms.Label();
             this.bgWorker = new System.ComponentModel.BackgroundWorker();
             this.progress = new System.Windows.Forms.ProgressBar();
+            this.metascoreLb = new System.Windows.Forms.Label();
+            this.imdbRb = new System.Windows.Forms.RadioButton();
+            this.metascoreRb = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.TemplateGb.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.posterPb)).BeginInit();
@@ -145,6 +148,7 @@
             // 
             this.TemplateGb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.TemplateGb.Controls.Add(this.metascoreLb);
             this.TemplateGb.Controls.Add(this.searchedForLbl);
             this.TemplateGb.Controls.Add(this.seasonsLb);
             this.TemplateGb.Controls.Add(this.plotLb);
@@ -175,7 +179,7 @@
             this.seasonsLb.AutoSize = true;
             this.seasonsLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.seasonsLb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(108)))), ((int)(((byte)(178)))));
-            this.seasonsLb.Location = new System.Drawing.Point(289, 48);
+            this.seasonsLb.Location = new System.Drawing.Point(430, 48);
             this.seasonsLb.Name = "seasonsLb";
             this.seasonsLb.Size = new System.Drawing.Size(73, 17);
             this.seasonsLb.TabIndex = 5;
@@ -254,11 +258,52 @@
             this.progress.TabIndex = 9;
             this.progress.Visible = false;
             // 
+            // metascoreLb
+            // 
+            this.metascoreLb.AutoSize = true;
+            this.metascoreLb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(51)))));
+            this.metascoreLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.metascoreLb.ForeColor = System.Drawing.Color.White;
+            this.metascoreLb.Location = new System.Drawing.Point(288, 45);
+            this.metascoreLb.Name = "metascoreLb";
+            this.metascoreLb.Padding = new System.Windows.Forms.Padding(3);
+            this.metascoreLb.Size = new System.Drawing.Size(136, 23);
+            this.metascoreLb.TabIndex = 7;
+            this.metascoreLb.Text = "66 / 100 Metascore";
+            // 
+            // imdbRb
+            // 
+            this.imdbRb.AutoSize = true;
+            this.imdbRb.Checked = true;
+            this.imdbRb.Location = new System.Drawing.Point(119, 94);
+            this.imdbRb.Name = "imdbRb";
+            this.imdbRb.Size = new System.Drawing.Size(51, 17);
+            this.imdbRb.TabIndex = 10;
+            this.imdbRb.TabStop = true;
+            this.imdbRb.Text = "IMDb";
+            this.imdbRb.UseVisualStyleBackColor = true;
+            this.imdbRb.Visible = false;
+            this.imdbRb.CheckedChanged += new System.EventHandler(this.imdbRb_CheckedChanged);
+            // 
+            // metascoreRb
+            // 
+            this.metascoreRb.AutoSize = true;
+            this.metascoreRb.Location = new System.Drawing.Point(177, 94);
+            this.metascoreRb.Name = "metascoreRb";
+            this.metascoreRb.Size = new System.Drawing.Size(75, 17);
+            this.metascoreRb.TabIndex = 11;
+            this.metascoreRb.Text = "Metascore";
+            this.metascoreRb.UseVisualStyleBackColor = true;
+            this.metascoreRb.Visible = false;
+            this.metascoreRb.CheckedChanged += new System.EventHandler(this.metascoreRb_CheckedChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(755, 722);
+            this.Controls.Add(this.metascoreRb);
+            this.Controls.Add(this.imdbRb);
             this.Controls.Add(this.progress);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.statusLb);
@@ -303,6 +348,9 @@
         private System.Windows.Forms.Label seasonsLb;
         private System.Windows.Forms.ProgressBar progress;
         private System.Windows.Forms.Label searchedForLbl;
+        private System.Windows.Forms.Label metascoreLb;
+        private System.Windows.Forms.RadioButton imdbRb;
+        private System.Windows.Forms.RadioButton metascoreRb;
 
     }
 }

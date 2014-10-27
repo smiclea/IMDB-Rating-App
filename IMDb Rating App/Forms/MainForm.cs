@@ -36,6 +36,10 @@ namespace IMDb_Rating_App
             searchBtn.Enabled = false;
             removeCurrentGroups();
 
+            imdbRb.Visible = false;
+            imdbRb.Checked = true;
+            metascoreRb.Visible = false;
+
             progress.Visible = true;
             progress.Value = 0;
 
@@ -91,6 +95,27 @@ namespace IMDb_Rating_App
                 Padding = ratingLb.Padding
             };
 
+            string metascoreText = "No Metascore";
+            Color metascoreBackground = Color.FromArgb(255, 204, 51);
+
+            if (title.Metascore > 0)
+                metascoreText = title.Metascore.ToString() + " Metascore";
+
+            if (title.Metascore > 0 && title.Metascore < 40)
+                metascoreBackground = Color.FromArgb(255, 0, 0);
+            else if (title.Metascore >= 60)
+                metascoreBackground = Color.FromArgb(102, 204, 51);
+
+            Label metascore = new Label()
+            {
+                AutoSize = true,
+                Font = metascoreLb.Font,
+                Text = metascoreText,
+                BackColor = metascoreBackground,
+                ForeColor = metascoreLb.ForeColor,
+                Padding = metascoreLb.Padding
+            };
+
             Label genres = new Label()
             {
                 Location = genresLb.Location,
@@ -119,7 +144,6 @@ namespace IMDb_Rating_App
 
             Label seasons = new Label()
             {
-                Location = seasonsLb.Location,
                 Font = seasonsLb.Font,
                 Text = seasonsStr,
                 AutoSize = true,
@@ -137,6 +161,7 @@ namespace IMDb_Rating_App
             group.Controls.Add(movieTitle);
             group.Controls.Add(poster);
             group.Controls.Add(rating);
+            group.Controls.Add(metascore);
             group.Controls.Add(genres);
             group.Controls.Add(plot);
             group.Controls.Add(seasons);
@@ -151,13 +176,20 @@ namespace IMDb_Rating_App
             panel1.Controls.Add(group);
 
             searchedFor.Location = new Point(movieTitle.Size.Width + movieTitle.Location.X, searchedForLbl.Location.Y);
-
+            metascore.Location = new Point(rating.Size.Width + rating.Location.X + 6, metascoreLb.Location.Y);
+            seasons.Location = new Point(metascore.Size.Width + metascore.Location.X, seasonsLb.Location.Y);
+            
             sortGroupBoxes();
         }
 
         private void sortGroupBoxes()
         {
-            List<TitleGroup> ratingsOrdered = titleGroups.OrderByDescending(x => x.Title.Rating).ToList();
+            List<TitleGroup> ratingsOrdered;
+
+            if (imdbRb.Checked)
+                ratingsOrdered = titleGroups.OrderByDescending(x => x.Title.Rating).ToList();
+            else
+                ratingsOrdered = titleGroups.OrderByDescending(x => x.Title.Metascore).ToList();
 
             for (int i = 0; i < ratingsOrdered.Count; i++)
             {
@@ -222,6 +254,8 @@ namespace IMDb_Rating_App
             statusLb.Text = "Done!";
             searchBtn.Enabled = true;
             progress.Visible = false;
+            imdbRb.Visible = true;
+            metascoreRb.Visible = true;
         }
 
         private void movieTitle_Click(object sender, EventArgs e)
@@ -269,6 +303,16 @@ namespace IMDb_Rating_App
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             setSelectedTemplate();
+        }
+
+        private void imdbRb_CheckedChanged(object sender, EventArgs e)
+        {
+            sortGroupBoxes();
+        }
+
+        private void metascoreRb_CheckedChanged(object sender, EventArgs e)
+        {
+            sortGroupBoxes();
         }
 
     }

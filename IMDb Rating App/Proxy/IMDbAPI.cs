@@ -33,6 +33,14 @@ namespace IMDb_Rating_App.Model
 
             title.Seasons = new Regex("season=\\d*&").Matches(moviePage).Count;
 
+            string metascore = new Regex("Metascore: <.*\\n.*>.*?(\\d*)\\/").Match(moviePage).Groups[1].Value;
+            int metascoreDbl = 0;
+
+            if (!string.IsNullOrEmpty(metascore) && !string.IsNullOrWhiteSpace(metascore))
+                metascoreDbl = int.Parse(metascore);
+
+            title.Metascore = metascoreDbl;
+
             string rating = new Regex("<span itemprop=\"ratingValue\">(\\d.\\d)</span>").Match(moviePage).Groups[1].Value;
             double ratingDbl = 0;
 
