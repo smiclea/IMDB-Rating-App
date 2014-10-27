@@ -247,7 +247,7 @@ namespace IMDb_Rating_App
             double remainingMins = Math.Floor(remainingSecs / 60);
             double secondsFromMins = remainingSecs - Math.Floor(remainingSecs / 60) * 60;
 
-            statusLb.Text = "Loading... " + progressPercentage.ToString("F2") + "% (" + remainingMins.ToString("F0") + " minutes " + secondsFromMins.ToString("F0") + " seconds)";
+            statusLb.Text = "Loading... " + progressPercentage.ToString("F2") + "% (" + (count + 1).ToString() + " / " + total.ToString() + ", " + remainingMins.ToString("F0") + " minutes " + secondsFromMins.ToString("F0") + " seconds)";
             progress.Value = e.ProgressPercentage;
 
             addTitle(currentTitle, count);
@@ -337,7 +337,6 @@ namespace IMDb_Rating_App
 
             if (link != "")
                 posterFrm.link = link;
-                //posterFrm.link = "http://ftp.gunadarma.ac.id/android/sdk/sdk_310712/docs/images/icon_design/IconGraphic_Icons_i.png";
 
             posterFrm.ShowDialog();
         }

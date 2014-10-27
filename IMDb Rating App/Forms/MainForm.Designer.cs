@@ -39,6 +39,7 @@
             this.statusLb = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.TemplateGb = new System.Windows.Forms.GroupBox();
+            this.metascoreLb = new System.Windows.Forms.Label();
             this.searchedForLbl = new System.Windows.Forms.Label();
             this.seasonsLb = new System.Windows.Forms.Label();
             this.plotLb = new System.Windows.Forms.Label();
@@ -48,7 +49,6 @@
             this.titleLb = new System.Windows.Forms.Label();
             this.bgWorker = new System.ComponentModel.BackgroundWorker();
             this.progress = new System.Windows.Forms.ProgressBar();
-            this.metascoreLb = new System.Windows.Forms.Label();
             this.imdbRb = new System.Windows.Forms.RadioButton();
             this.metascoreRb = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
@@ -126,9 +126,9 @@
             this.statusLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.statusLb.Location = new System.Drawing.Point(116, 76);
             this.statusLb.Name = "statusLb";
-            this.statusLb.Size = new System.Drawing.Size(244, 13);
+            this.statusLb.Size = new System.Drawing.Size(287, 13);
             this.statusLb.TabIndex = 7;
-            this.statusLb.Text = "Loading... 36.50% (5 minutes 10 seconds)";
+            this.statusLb.Text = "Loading... 36.50% (2 / 10, 5 minutes 10 seconds)";
             // 
             // panel1
             // 
@@ -163,6 +163,19 @@
             this.TemplateGb.TabStop = false;
             this.TemplateGb.Text = "1st";
             this.TemplateGb.Visible = false;
+            // 
+            // metascoreLb
+            // 
+            this.metascoreLb.AutoSize = true;
+            this.metascoreLb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(51)))));
+            this.metascoreLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.metascoreLb.ForeColor = System.Drawing.Color.White;
+            this.metascoreLb.Location = new System.Drawing.Point(288, 45);
+            this.metascoreLb.Name = "metascoreLb";
+            this.metascoreLb.Padding = new System.Windows.Forms.Padding(3);
+            this.metascoreLb.Size = new System.Drawing.Size(136, 23);
+            this.metascoreLb.TabIndex = 7;
+            this.metascoreLb.Text = "66 / 100 Metascore";
             // 
             // searchedForLbl
             // 
@@ -259,19 +272,6 @@
             this.progress.Step = 1;
             this.progress.TabIndex = 9;
             this.progress.Visible = false;
-            // 
-            // metascoreLb
-            // 
-            this.metascoreLb.AutoSize = true;
-            this.metascoreLb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(51)))));
-            this.metascoreLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.metascoreLb.ForeColor = System.Drawing.Color.White;
-            this.metascoreLb.Location = new System.Drawing.Point(288, 45);
-            this.metascoreLb.Name = "metascoreLb";
-            this.metascoreLb.Padding = new System.Windows.Forms.Padding(3);
-            this.metascoreLb.Size = new System.Drawing.Size(136, 23);
-            this.metascoreLb.TabIndex = 7;
-            this.metascoreLb.Text = "66 / 100 Metascore";
             // 
             // imdbRb
             // 
