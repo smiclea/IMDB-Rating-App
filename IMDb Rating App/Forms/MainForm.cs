@@ -56,7 +56,7 @@ namespace IMDb_Rating_App
             titleGroups = new List<TitleGroup>();
         }
 
-        private void addTitle(IMDbTitle title, int counter)
+        private void addTitle(IMDbTitle title)
         {
             GroupBox group = new GroupBox()
             {
@@ -223,8 +223,6 @@ namespace IMDb_Rating_App
             Regex reg = new Regex(expressionTi.Text);
             MatchCollection matches = reg.Matches(data);
 
-            List<string> titles = new List<string>();
-
             IMDbAPI imdb = new IMDbAPI();
             total = matches.Count;
 
@@ -250,7 +248,7 @@ namespace IMDb_Rating_App
             statusLb.Text = "Loading... " + progressPercentage.ToString("F2") + "% (" + (count + 1).ToString() + " / " + total.ToString() + ", " + remainingMins.ToString("F0") + " minutes " + secondsFromMins.ToString("F0") + " seconds)";
             progress.Value = e.ProgressPercentage;
 
-            addTitle(currentTitle, count);
+            addTitle(currentTitle);
         }
 
         private void bgWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
